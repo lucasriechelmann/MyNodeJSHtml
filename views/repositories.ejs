@@ -14,5 +14,23 @@
             </div>            
         </div>
     <% })%>
-</ul>
+</div>
+<table class="table">
+    <thead>
+        <tr class="bg-primary text-white">
+            <th>Name</th>
+            <th>Description</th>
+            <th></th>
+        </tr>        
+    </thead>
+    <tbody>
+        <% repos.forEach(function(repo) { %>
+            <tr>
+                <td><%=repo.name%></td>
+                <td><%=repo.description%></td>
+                <td><a href="<%=repo.url%>" class="btn btn-primary">Go to Repository</a></td>
+            </tr>
+        <% })%>
+    </tbody>
+</table>
 <%- include('layout/footer.ejs') %>
